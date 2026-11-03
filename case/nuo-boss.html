@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Supernatural: Nuo Boss · Zhenbang Cao</title>
+<meta name="description" content="Case study: designing the Nuo puppeteer boss for a multi-team PvPvE map in Supernatural (Giant Network).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Chakra+Petch:wght@500;600;700&family=Barlow:wght@400;500&family=Share+Tech+Mono&display=swap">
+<link rel="stylesheet" href="case.css">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body class="combat">
+<div class="wrap">
+  <nav class="top" aria-label="Back"><a class="back" href="../index.html#work">← All work</a><span class="mono" style="color:var(--dim)">Case study // combat</span></nav>
+
+  <header class="hero">
+    <div class="kicker mono">Giant Network · internship</div>
+    <h1>Supernatural: Nuo Boss</h1>
+    <p class="lede">A third-party boss for a multi-team map, built to change how players fight each other rather than to be one more hard enemy.</p>
+    <div class="meta"><dl>
+      <div><dt class="mono">Game</dt><dd>Supernatural</dd></div>
+      <div><dt class="mono">Studio</dt><dd>Giant Network</dd></div>
+      <div><dt class="mono">Role</dt><dd>Combat design intern</dd></div>
+      <div><dt class="mono">When</dt><dd>Jun – Sep 2026</dd></div>
+      <div><dt class="mono">Mode</dt><dd>Multi-team PvPvE</dd></div>
+    </dl></div>
+  </header>
+
+  <figure>
+    <div class="shot"><img src="../img/nuo.jpg" alt="The Nuo boss in her opera robes, with a boss health bar above her"></div>
+    <figcaption class="mono">The Nuo boss in game · © Giant Network</figcaption>
+  </figure>
+
+  <section>
+    <h2><small>// the problem</small>One more enemy changes nothing</h2>
+    <p class="muted">In PvP, players watch each other: positions, resources, firefights. A boss that is only a big health bar gets focused down or avoided, and the match plays out the same as before.</p>
+    <p class="muted">So the goal was pressure from more than one source. Players should have to deal with rival teams and the boss at the same time, and the boss's behavior should push them to move.</p>
+  </section>
+
+  <section>
+    <h2><small>// my role</small>What I owned</h2>
+    <ul class="plain">
+      <li><b>Research:</b> teardowns of bosses built for PvP, focused on what they ask players to do and how they signal it.</li>
+      <li><b>Rules:</b> behavior states, skill triggers, targeting, hit checks and state changes.</li>
+      <li><b>Specs:</b> each skill broken down for code, animation, VFX, audio and UI.</li>
+      <li><b>Follow-through:</b> builds, testing and tuning against the original goal.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><small>// decisions</small>Key design decisions</h2>
+    <div class="decisions">
+      <div class="decision">
+        <h3>Keep the assassin's pressure, change its look</h3>
+        <p>We started from a hit-and-run assassin archetype common in PvPvE shooters: quick repositioning, short reveal windows, decoys and vision blocking. It created pressure, but in a busy firefight it read like an elite enemy, not a boss.</p>
+        <p>We kept every skill's intent and rebuilt the presentation around Nuo opera: water sleeves, the mask, chanting and puppets.</p>
+      </div>
+      <div class="decision">
+        <h3>From hunter to puppeteer</h3>
+        <p>Instead of chasing players herself, she controls the field. Puppets placed around the map wake when she activates and hunt players; she can summon a giant Nuo form for an execution, and afterwards fallen puppets rise again.</p>
+        <p>Threats spread across the map, so players can't just watch one target, and her restrained, ceremonial movement makes her instantly recognisable.</p>
+      </div>
+      <div class="decision">
+        <h3>Pressure that reshapes the fight</h3>
+        <p>Area control and puppet revivals change the conditions of a firefight: a safe angle stops being safe, one team has to relocate, the other gets a window to push. Her value is in how she shifts fights, not in how many players she kills.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><small>// spec format</small>How I write a skill</h2>
+    <p class="muted">I avoid describing only the result ("she dashes at the player"). Every skill is written as rules first, then the moments where animation, VFX, audio and UI fire.</p>
+    <div class="flow mono"><span>Precondition</span><i>→</i><span>Trigger</span><i>→</i><span>Target</span><i>→</i><span>Execution</span><i>→</i><span>Hit / miss</span><i>→</i><span>Result</span><i>→</i><span>State change</span><i>→</i><span>Edge cases</span></div>
+  </section>
+
+  <section>
+    <h2><small>// criteria</small>How I judge a boss</h2>
+    <div class="trio">
+      <div><h3>Readable</h3><p>You can fail the first time, but you should know why you failed.</p></div>
+      <div><h3>A real choice</h3><p>Once you understand the rule, there is still a decision to make, not one fixed answer.</p></div>
+      <div><h3>Clear feedback</h3><p>Right and wrong actions both show a visible result, so players can learn.</p></div>
+    </div>
+    <div class="qa" style="margin-top:22px"><b>When testers say "hard" but mean "annoying"</b><p>I first find the cause: a tight window is a tuning problem, not knowing why you died is a feedback problem, and one repetitive answer is a rules problem. Lowering damage is rarely the first fix.</p></div>
+  </section>
+
+  <section>
+    <h2><small>// takeaway</small>What I learned</h2>
+    <p class="takeaway">A design is a <em>hypothesis about player behavior</em>. I write the rules, predict what players will do, then test whether they actually do it.</p>
+  </section>
+
+  <footer class="mono"><a href="../index.html#work">← Back to all work</a><span>Zhenbang Cao · zhenbangc@gmail.com</span></footer>
+</div>
+<script>
+// open at the top, also when this page is shown inside a frame that kept the previous page's scroll
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+const toTop = () => { scrollTo(0, 0); document.querySelector('.top')?.scrollIntoView({ block: 'start' }); };
+toTop(); addEventListener('load', toTop);
+</script>
+</body>
+</html>

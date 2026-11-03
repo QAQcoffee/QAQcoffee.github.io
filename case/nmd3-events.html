@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ninja Must Die 3: Live Events · Zhenbang Cao</title>
+<meta name="description" content="Case study: live-ops event design for Ninja Must Die 3 global, including the 1000-day anniversary check-in.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Chakra+Petch:wght@500;600;700&family=Barlow:wght@400;500&family=Share+Tech+Mono&display=swap">
+<link rel="stylesheet" href="case.css">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<div class="wrap">
+  <nav class="top" aria-label="Back"><a class="back" href="../index.html#work">← All work</a><span class="mono" style="color:var(--dim)">Case study // systems</span></nav>
+
+  <header class="hero">
+    <div class="kicker mono">Pandada Games · internship</div>
+    <h1>Ninja Must Die 3: Live Events</h1>
+    <p class="lede">Live-ops event design for the global version, from a one-line request to a feature players actually see.</p>
+    <div class="meta"><dl>
+      <div><dt class="mono">Game</dt><dd>Ninja Must Die 3, global</dd></div>
+      <div><dt class="mono">Studio</dt><dd>Pandada Games</dd></div>
+      <div><dt class="mono">Role</dt><dd>Systems design intern</dd></div>
+      <div><dt class="mono">When</dt><dd>Apr – Sep 2025</dd></div>
+      <div><dt class="mono">Tools</dt><dd>Unity, Lua tables</dd></div>
+    </dl></div>
+    <div class="facts mono" style="margin-top:26px"><span><b>20+</b>Events shipped</span><span><b>3</b>New features owned</span><span><b>3</b>Versions localized</span></div>
+  </header>
+
+  <section style="padding-top:20px">
+    <h2><small>// my role</small>What I owned</h2>
+    <ul class="plain">
+      <li><b>Across 20+ events:</b> requirements, rules and flow, design docs, data in Lua tables, asset follow-up, test builds, sign-off and post-launch fixes.</li>
+      <li><b>Three new event features, end to end:</b> goals, rules, flow, UI wireframes, then Unity prefabs, asset hookup, testing and tuning.</li>
+      <li><b>Localization:</b> English review for three versions, checked in the real UI, not only in the text table.</li>
+    </ul>
+  </section>
+
+  <section>
+    <figure>
+      <div class="shot"><img src="../img/nmd3.jpg" alt="Banner for the 1000-day anniversary check-in event, showing two characters in new outfits"></div>
+      <figcaption class="mono">1000-day anniversary check-in · © Pandada Games</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2><small>// featured feature</small>The 1000-day check-in</h2>
+    <p class="muted">The request was one line: give players a free skin for the anniversary. The design question was how to give it so that it builds anticipation and becomes part of the anniversary, instead of ending the moment players log in.</p>
+    <div class="trio" style="margin-top:20px">
+      <div><h3>Goal 1</h3><p>Make players look forward to the skin before they get it.</p></div>
+      <div><h3>Goal 2</h3><p>Show global players the game is still cared for and actively run.</p></div>
+      <div><h3>Constraint</h3><p>Carry the anniversary warm-up and daily activity, not just one reward.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2><small>// decisions</small>Key design decisions</h2>
+    <div class="decisions">
+      <div class="decision">
+        <h3>Two phases instead of a login gift</h3>
+        <p>A warm-up phase announced the skin and how to earn it; the main phase delivered it through daily check-ins. The skin stayed in players' minds across the whole anniversary rather than for a single login.</p>
+      </div>
+      <div class="decision">
+        <h3>A gift that reads as a real gift</h3>
+        <p>Outfits matching paid quality for two of the most popular characters, plus extra check-in rewards such as a limited weapon and gacha resources, so the event felt like the studio investing in the community.</p>
+      </div>
+      <div class="decision">
+        <h3>From brief to build, myself</h3>
+        <p>I broke the goal down into rules, flow and UI wireframes, then followed art and code, set up the Unity prefabs and assets, and tested until the shipped event matched the design.</p>
+      </div>
+    </div>
+    <div class="qa" style="margin-top:22px"><b>Why not just give it on login?</b><p>It feels generous, but the moment is over in a day. This event also had to warm up the anniversary and keep players coming back, so the skin needed to stay visible for the whole period.</p></div>
+  </section>
+
+  <section>
+    <h2><small>// criteria</small>How I judge an event</h2>
+    <div class="trio">
+      <div><h3>Motivation</h3><p>Why would a player enter? The reward, content or novelty must be obvious.</p></div>
+      <div><h3>Experience</h3><p>Rules read fast, the flow is smooth, and repetition and time cost stay fair.</p></div>
+      <div><h3>Version value</h3><p>Did it do its job for the update: activity, content, rewards or atmosphere?</p></div>
+    </div>
+    <div class="qa" style="margin-top:22px"><b>When the numbers are weak</b><p>First find which number. Low entry points to visibility or reward pull; low completion to flow length or clarity; a fast drop after day one to repetition and long-term pull. Then change one variable and watch the same metric.</p></div>
+  </section>
+
+  <section>
+    <h2><small>// localization</small>What I check in English text</h2>
+    <div class="trio">
+      <div><h3>Meaning</h3><p>"7 days in total" is not "7 days in a row". "Once per day" can't lose "per day". "A chance to get" is not "get".</p></div>
+      <div><h3>Fit</h3><p>"Claim Rewards" overflowing a button, titles wrapping over timers, {0} and %s in the wrong order.</p></div>
+      <div><h3>Consistency</h3><p>Same names across event UI, notices, mail and streams, and end times stated in the player's time zone.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2><small>// takeaway</small>What I learned</h2>
+    <p class="takeaway">I went from <em>designing a plan</em> to <em>owning what actually reaches players</em>: goals, flow, UI, data, testing and launch.</p>
+  </section>
+
+  <footer class="mono"><a href="../index.html#work">← Back to all work</a><span>Zhenbang Cao · zhenbangc@gmail.com</span></footer>
+</div>
+<script>
+// open at the top, also when this page is shown inside a frame that kept the previous page's scroll
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+const toTop = () => { scrollTo(0, 0); document.querySelector('.top')?.scrollIntoView({ block: 'start' }); };
+toTop(); addEventListener('load', toTop);
+</script>
+</body>
+</html>
